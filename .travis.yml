@@ -1,0 +1,7 @@
+os:
+  - osx
+  - linux
+
+language: ruby
+install: bundle install
+script: bundle exec rspec
