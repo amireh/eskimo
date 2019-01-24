@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eskimo (1.0.0)
+    eskimo (2.0.0)
       pastel (~> 0.7)
       strings (~> 0.1)
       tty-screen (~> 0.6)

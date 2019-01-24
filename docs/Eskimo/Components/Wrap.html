@@ -106,6 +106,13 @@
     
 <p>Wrap a block text with newlines at a certain threshold.</p>
 
+<pre class="code ruby"><code class="ruby"><span class='const'>Wrap</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="Eskimo::Components::Wrap#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='label'>width:</span> <span class='int'>3</span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foobar</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span>
+<span class='comment'># =&gt; &quot;foo&quot;
+</span><span class='comment'>#    &quot;bar&quot;
+</span></code></pre>
+
 
   </div>
 </div>
@@ -247,17 +254,17 @@
       <pre class="lines">
 
 
-104
-105
-106
-107</pre>
+196
+197
+198
+199</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 104</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 196</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>width:</span> <span class='const'><span class='object_link'><a href="../Components.html#SCREEN_COLUMNS-constant" title="Eskimo::Components::SCREEN_COLUMNS (constant)">SCREEN_COLUMNS</a></span></span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
   <span class='ivar'>@width</span> <span class='op'>=</span> <span class='id identifier rubyid_width'>width</span>
-  <span class='kw'>super</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
+  <span class='kw'>super</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -297,12 +304,12 @@
       <pre class="lines">
 
 
-102
-103
-104</pre>
+194
+195
+196</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_width'>width</span>
   <span class='ivar'>@width</span>
@@ -334,12 +341,12 @@
       <pre class="lines">
 
 
-109
-110
-111</pre>
+201
+202
+203</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 109</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 201</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='op'>**</span><span class='rparen'>)</span>
   <span class='const'>Strings</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='kw'>super</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='rparen'>)</span>
@@ -354,7 +361,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Jan 22 12:25:12 2019 by
+  Generated on Thu Jan 24 12:25:46 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.15 (ruby-2.5.1).
 </div>

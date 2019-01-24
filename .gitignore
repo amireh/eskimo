@@ -1,3 +1,4 @@
 /.yardoc
 /bench.rb
 /coverage
+/*.gem

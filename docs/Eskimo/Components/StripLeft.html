@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Eskimo::Components::Strip
+  Class: Eskimo::Components::StripLeft
   
     &mdash; Eskimo
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  pathId = "Eskimo::Components::Strip";
+  pathId = "Eskimo::Components::StripLeft";
   relpath = '../../';
 </script>
 
@@ -39,7 +39,7 @@
     <a href="../../_index.html">Index (S)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Eskimo.html" title="Eskimo (module)">Eskimo</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Components.html" title="Eskimo::Components (module)">Components</a></span></span>
      &raquo; 
-    <span class="title">Strip</span>
+    <span class="title">StripLeft</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Eskimo::Components::Strip
+      <div id="content"><h1>Class: Eskimo::Components::StripLeft
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next"><span class='object_link'><a href="../Component.html" title="Eskimo::Component (class)">Eskimo::Component</a></span></li>
           
-            <li class="next">Eskimo::Components::Strip</li>
+            <li class="next">Eskimo::Components::StripLeft</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -104,10 +104,10 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Remove surrounding whitespace.</p>
+<p>Remove whitespace from the beginning.</p>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Strip</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Component.html#initialize-instance_method" title="Eskimo::Component#initialize (method)">new</a></span></span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  hello world  </span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
-<span class='comment'># =&gt; &quot;hello world&quot;
+<pre class="code ruby"><code class="ruby"><span class='const'>StripLeft</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Component.html#initialize-instance_method" title="Eskimo::Component#initialize (method)">new</a></span></span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  hello world  </span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
+<span class='comment'># =&gt; &quot;hello world  &quot;
 </span></code></pre>
 
 
@@ -194,15 +194,15 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='op'>**</span><span class='rparen'>)</span>
-  <span class='kw'>super</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
+  <span class='kw'>super</span><span class='period'>.</span><span class='id identifier rubyid_lstrip'>lstrip</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>

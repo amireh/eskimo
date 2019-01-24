@@ -3,9 +3,7 @@
 require 'spec_helper'
 
 RSpec.describe Eskimo::Renderer do
-  ESK = Eskimo::Components
-
-  describe 'SOFT_BREAK' do
+  describe 'SoftBreak' do
     it 'inserts a soft linebreak' do
       expect(
         subject.apply {
@@ -19,7 +17,7 @@ RSpec.describe Eskimo::Renderer do
     end
   end
 
-  describe 'BR' do
+  describe 'LineBreak' do
     it 'inserts a hard linebreak' do
       expect(
         subject.apply {
@@ -33,7 +31,7 @@ RSpec.describe Eskimo::Renderer do
     end
   end
 
-  describe 'STYLE' do
+  describe 'Style' do
     it 'applies ANSI styling to text' do
       expect(
         subject.apply {
@@ -55,7 +53,7 @@ RSpec.describe Eskimo::Renderer do
     end
   end
 
-  describe 'WRAP' do
+  describe 'Wrap' do
     it 'wraps text' do
       expect(
         subject.apply do
@@ -67,7 +65,7 @@ RSpec.describe Eskimo::Renderer do
     end
   end
 
-  describe 'INDENT' do
+  describe 'Indent' do
     it 'indents each line' do
       expect(
         subject.apply do
@@ -79,21 +77,89 @@ RSpec.describe Eskimo::Renderer do
     end
   end
 
-  describe 'STRIP' do
+  describe 'Squeeze' do
+    it 'swallows consecutive newlines' do
+      expect(
+        subject.apply do
+          ESK::Squeeze.new([
+            ESK::SoftBreak.new,
+            false && '1',
+
+            ESK::SoftBreak.new,
+            false && '2',
+
+            ESK::SoftBreak.new,
+            '3',
+
+            ESK::SoftBreak.new,
+            '4',
+          ])
+        end
+      ).to eq("\n3\n4")
+    end
+
+    it 'does not swallow consecutive newlines in inner children' do
+      expect(
+        subject.apply do
+          ESK::Squeeze.new([
+            ESK::Indent.new(width: 0) do
+              [
+                ESK::SoftBreak.new,
+                false && '1',
+
+                ESK::SoftBreak.new,
+                false && '2',
+
+                ESK::SoftBreak.new,
+                '3',
+
+                ESK::SoftBreak.new,
+                '4',
+              ]
+            end
+          ])
+        end
+      ).to eq("\n\n\n3\n4")
+    end
+  end
+
+  describe 'Strip' do
     it 'strips surrounding whitespace' do
       expect(
         subject.apply do
           ESK::Strip.new do
-            ESK::Indent.new(width: 2) do
-              ("hello world")
-            end
+            "  hello world  "
           end
         end
       ).to eq("hello world")
     end
   end
 
-  describe 'TRUNCATE' do
+  describe 'StripLeft' do
+    it 'strips whitespace from the head' do
+      expect(
+        subject.apply do
+          ESK::StripLeft.new do
+            "  hello world  "
+          end
+        end
+      ).to eq("hello world  ")
+    end
+  end
+
+  describe 'StripLeft' do
+    it 'strips whitespace from the rear' do
+      expect(
+        subject.apply do
+          ESK::StripRight.new do
+            "  hello world  "
+          end
+        end
+      ).to eq("  hello world")
+    end
+  end
+
+  describe 'Truncate' do
     it 'truncates a string from the beginning if it exceeds the length' do
       expect(
         subject.apply do

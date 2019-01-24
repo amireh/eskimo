@@ -131,7 +131,7 @@ children  which converts them to a String and returns them.</p>
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="Components/Indent.html" title="Eskimo::Components::Indent (class)">Eskimo::Components::Indent</a></span>, <span class='object_link'><a href="Components/Strip.html" title="Eskimo::Components::Strip (class)">Eskimo::Components::Strip</a></span>, <span class='object_link'><a href="Components/Style.html" title="Eskimo::Components::Style (class)">Eskimo::Components::Style</a></span>, <span class='object_link'><a href="Components/Truncate.html" title="Eskimo::Components::Truncate (class)">Eskimo::Components::Truncate</a></span>, <span class='object_link'><a href="Components/Wrap.html" title="Eskimo::Components::Wrap (class)">Eskimo::Components::Wrap</a></span></p>
+  <p class="children"><span class='object_link'><a href="Components/Indent.html" title="Eskimo::Components::Indent (class)">Eskimo::Components::Indent</a></span>, <span class='object_link'><a href="Components/Strip.html" title="Eskimo::Components::Strip (class)">Eskimo::Components::Strip</a></span>, <span class='object_link'><a href="Components/StripLeft.html" title="Eskimo::Components::StripLeft (class)">Eskimo::Components::StripLeft</a></span>, <span class='object_link'><a href="Components/StripRight.html" title="Eskimo::Components::StripRight (class)">Eskimo::Components::StripRight</a></span>, <span class='object_link'><a href="Components/Style.html" title="Eskimo::Components::Style (class)">Eskimo::Components::Style</a></span>, <span class='object_link'><a href="Components/Truncate.html" title="Eskimo::Components::Truncate (class)">Eskimo::Components::Truncate</a></span>, <span class='object_link'><a href="Components/Wrap.html" title="Eskimo::Components::Wrap (class)">Eskimo::Components::Wrap</a></span></p>
 </div>
 
 
@@ -151,7 +151,7 @@ children  which converts them to a String and returns them.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(&amp;children)  &#x21d2; Component </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(&amp;children_gen)  &#x21d2; Component </a>
     
 
     
@@ -205,7 +205,7 @@ children  which converts them to a String and returns them.</p>
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(&amp;children)  &#x21d2; <tt><span class='object_link'><a href="" title="Eskimo::Component (class)">Component</a></span></tt> 
+    #<strong>initialize</strong>(&amp;children_gen)  &#x21d2; <tt><span class='object_link'><a href="" title="Eskimo::Component (class)">Component</a></span></tt> 
   
 
   
@@ -235,8 +235,8 @@ children  which converts them to a String and returns them.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/eskimo/component.rb', line 23</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
-  <span class='ivar'>@children</span> <span class='op'>=</span> <span class='id identifier rubyid_children'>children</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='comma'>,</span> <span class='op'>**</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_children_gen'>children_gen</span><span class='rparen'>)</span>
+  <span class='ivar'>@children</span> <span class='op'>=</span> <span class='id identifier rubyid_children_gen'>children_gen</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -285,7 +285,7 @@ children  which converts them to a String and returns them.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Jan 22 12:25:12 2019 by
+  Generated on Thu Jan 24 12:25:45 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.15 (ruby-2.5.1).
 </div>

@@ -20,8 +20,8 @@ module Eskimo
   #    `render` prop provided by {Renderer#apply} with the tracked children
   #    which converts them to a String and returns them.
   class Component
-    def initialize(&children)
-      @children = children
+    def initialize(*, **, &children_gen)
+      @children = children_gen
     end
 
     def render(render:, **)
