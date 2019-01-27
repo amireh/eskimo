@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Eskimo::Component
+  
+    &mdash; Eskimo
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Eskimo::Component";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Eskimo.html" title="Eskimo (module)">Eskimo</a></span></span>
+     &raquo; 
+    <span class="title">Component</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Eskimo::Component
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Eskimo::Component</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/eskimo/component.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>A base component class that renders child components defined in a block
+into a String for further formatting.</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>MyComponent</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Eskimo.html" title="Eskimo (module)">Eskimo</a></span></span><span class='op'>::</span><span class='const'>Component</span>
+  <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='op'>**</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='kw'>super</span>
+    <span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span> <span class='comment'># =&gt; true
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>Use of this class is optional. What&#39;s happening under the hood is:</p>
+<ol><li>
+<p>Component maintains a reference to the Proc passed to <span class='object_link'><a href="#initialize-instance_method" title="Eskimo::Component#initialize (method)">#initialize</a></span>. That 
+Proc can potentially return a list of child components to render.</p>
+</li><li>
+<p><span class='object_link'><a href="#render-instance_method" title="Eskimo::Component#render (method)">#render</a></span> (called via "super" from sub-classes) invokes the 
+<code>render</code> prop provided by <span class='object_link'><a href="Renderer.html#apply-instance_method" title="Eskimo::Renderer#apply (method)">Renderer#apply</a></span> with the tracked
+children  which converts them to a String and returns them.</p>
+</li></ol>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Components/DidYouMean.html" title="Eskimo::Components::DidYouMean (class)">Eskimo::Components::DidYouMean</a></span>, <span class='object_link'><a href="Components/Highlight.html" title="Eskimo::Components::Highlight (class)">Eskimo::Components::Highlight</a></span>, <span class='object_link'><a href="Components/HighlightColumn.html" title="Eskimo::Components::HighlightColumn (class)">Eskimo::Components::HighlightColumn</a></span>, <span class='object_link'><a href="Components/Indent.html" title="Eskimo::Components::Indent (class)">Eskimo::Components::Indent</a></span>, <span class='object_link'><a href="Components/Strip.html" title="Eskimo::Components::Strip (class)">Eskimo::Components::Strip</a></span>, <span class='object_link'><a href="Components/StripLeft.html" title="Eskimo::Components::StripLeft (class)">Eskimo::Components::StripLeft</a></span>, <span class='object_link'><a href="Components/StripRight.html" title="Eskimo::Components::StripRight (class)">Eskimo::Components::StripRight</a></span>, <span class='object_link'><a href="Components/Style.html" title="Eskimo::Components::Style (class)">Eskimo::Components::Style</a></span>, <span class='object_link'><a href="Components/Truncate.html" title="Eskimo::Components::Truncate (class)">Eskimo::Components::Truncate</a></span>, <span class='object_link'><a href="Components/Wrap.html" title="Eskimo::Components::Wrap (class)">Eskimo::Components::Wrap</a></span></p>
+</div>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(&amp;children_gen)  &#x21d2; Component </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Component.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-instance_method" title="#render (instance method)">#<strong>render</strong>(render:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(&amp;children_gen)  &#x21d2; <tt><span class='object_link'><a href="" title="Eskimo::Component (class)">Component</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Component</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/component.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='comma'>,</span> <span class='op'>**</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_children_gen'>children_gen</span><span class='rparen'>)</span>
+  <span class='ivar'>@children</span> <span class='op'>=</span> <span class='id identifier rubyid_children_gen'>children_gen</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="render-instance_method">
+  
+    #<strong>render</strong>(render:)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/component.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>render:</span><span class='comma'>,</span> <span class='op'>**</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_render'>render</span><span class='lbracket'>[</span><span class='ivar'>@children</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Jan 27 15:21:59 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.15 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
