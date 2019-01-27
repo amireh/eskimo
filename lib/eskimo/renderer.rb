@@ -18,22 +18,23 @@ module Eskimo
     private
 
     def render(*components)
-      components.select(&NOT_FALSEY).reduce('') do |buf, component|
-        case component
-        when String
-          buf + component
-        when Array
-          buf + render(*component)
-        when Proc
-          buf + render(component[**@props])
-        else
-          if component.respond_to?(:render)
-            buf + render(component.render(**@props))
-          else
-            bail(component)
-          end
+      buf = +''
+
+      for component in components do
+        if component.is_a?(String)
+          buf << component
+        elsif component.is_a?(Array)
+          buf << render(*component)
+        elsif component.is_a?(Proc)
+          buf << render(component[**@props])
+        elsif component.respond_to?(:render)
+          buf << render(component.render(**@props))
+        elsif component
+          bail(component)
         end
       end
+
+      buf
     end
 
     def bail(component)
@@ -41,8 +42,5 @@ module Eskimo
         "Eskimo: don't know how to render #{component.class} => #{component}"
       )
     end
-
-    NOT_FALSEY = ->(x) { !!x }.freeze
-    private_constant :NOT_FALSEY
   end
 end
