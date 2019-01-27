@@ -9,6 +9,8 @@ require 'eskimo/constants'
 require 'eskimo/component'
 require 'eskimo/renderer'
 
+require 'eskimo/components/did_you_mean'
+require 'eskimo/components/either'
 require 'eskimo/components/highlight'
 require 'eskimo/components/highlight_column'
 require 'eskimo/components/indent'

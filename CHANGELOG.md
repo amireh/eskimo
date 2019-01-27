@@ -1,6 +1,8 @@
 ## 2.1.0
 
 - Slightly improved the performance of the rendering routine
+- Added component `DidYouMean`
+- Added component `Either`
 - Added component `Highlight`
 - Added component `HighlightColumn`
 
