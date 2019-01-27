@@ -1,6 +1,8 @@
 ## 2.1.0
 
 - Slightly improved the performance of the rendering routine
+- Added component `Highlight`
+- Added component `HighlightColumn`
 
 ## 2.0.0
 
