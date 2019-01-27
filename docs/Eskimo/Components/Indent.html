@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/eskimo/components.rb</dd>
+    <dd>lib/eskimo/components/indent.rb</dd>
   </dl>
   
 </div>
@@ -254,13 +254,13 @@
       <pre class="lines">
 
 
+15
+16
 17
-18
-19
-20</pre>
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/indent.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='label'>width:</span> <span class='int'>4</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
   <span class='ivar'>@width</span> <span class='op'>=</span> <span class='id identifier rubyid_width'>width</span>
@@ -304,12 +304,12 @@
       <pre class="lines">
 
 
-15
-16
-17</pre>
+13
+14
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 15</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/indent.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_width'>width</span>
   <span class='ivar'>@width</span>
@@ -341,12 +341,12 @@
       <pre class="lines">
 
 
-22
-23
-24</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/indent.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='op'>**</span><span class='rparen'>)</span>
   <span class='const'>Strings</span><span class='period'>.</span><span class='id identifier rubyid_pad'>pad</span><span class='lparen'>(</span><span class='kw'>super</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='comma'>,</span><span class='id identifier rubyid_width'>width</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -361,7 +361,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jan 24 12:25:45 2019 by
+  Generated on Sun Jan 27 14:07:26 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.15 (ruby-2.5.1).
 </div>

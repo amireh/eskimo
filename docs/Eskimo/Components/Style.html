@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/eskimo/components.rb</dd>
+    <dd>lib/eskimo/components/style.rb</dd>
   </dl>
   
 </div>
@@ -279,15 +279,15 @@ documentation</a> for the accepted styles.</p>
       <pre class="lines">
 
 
-129
-130
-131
-132
-133
-134</pre>
+13
+14
+15
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 129</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/style.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_style'>style</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
   <span class='ivar'>@style</span> <span class='op'>=</span> <span class='id identifier rubyid_style'>style</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
@@ -333,12 +333,12 @@ documentation</a> for the accepted styles.</p>
       <pre class="lines">
 
 
-127
-128
-129</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/style.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pastel'>pastel</span>
   <span class='ivar'>@pastel</span>
@@ -376,12 +376,12 @@ documentation</a> for the accepted styles.</p>
       <pre class="lines">
 
 
-127
-128
-129</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/style.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_style'>style</span>
   <span class='ivar'>@style</span>
@@ -413,12 +413,12 @@ documentation</a> for the accepted styles.</p>
       <pre class="lines">
 
 
-136
-137
-138</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/eskimo/components.rb', line 136</span>
+      <pre class="code"><span class="info file"># File 'lib/eskimo/components/style.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='op'>**</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_pastel'>pastel</span><span class='period'>.</span><span class='id identifier rubyid_decorate'>decorate</span><span class='lparen'>(</span><span class='kw'>super</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_style'>style</span><span class='rparen'>)</span>
@@ -433,7 +433,7 @@ documentation</a> for the accepted styles.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Jan 24 12:25:45 2019 by
+  Generated on Sun Jan 27 14:07:26 2019 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.15 (ruby-2.5.1).
 </div>

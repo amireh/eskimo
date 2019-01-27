@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+module Eskimo
+  module Components
+    # Remove whitespace from the end.
+    #
+    #     StripRight.new { "  hello world  " }
+    #     # => "  hello world"
+    class StripRight < Component
+      def render(**)
+        super.rstrip
+      end
+    end
+  end
+end

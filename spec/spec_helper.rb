@@ -8,6 +8,7 @@ SimpleCov.start do
 end
 
 require 'eskimo'
+require_relative './support/component_suite'
 
 ESK = Eskimo::Components
 
@@ -31,6 +32,11 @@ RSpec.configure do |config|
   config.default_formatter = 'doc' if config.files_to_run.one?
 
   config.order = :random
+  config.define_derived_metadata(file_path: %r{/spec/components/}) do |metadata|
+    metadata[:type] = :component
+  end
+
+  config.include EskimoTest::ComponentSuite, type: :component
 
   Kernel.srand config.seed
 end

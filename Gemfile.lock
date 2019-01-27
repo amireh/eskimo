@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eskimo (2.0.0)
+    eskimo (2.1.0)
       pastel (~> 0.7)
       strings (~> 0.1)
       tty-screen (~> 0.6)
@@ -55,4 +55,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   1.16.2
+   1.17.3
