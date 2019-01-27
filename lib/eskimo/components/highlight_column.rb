@@ -31,7 +31,7 @@ module Eskimo
         lines = super.lines
         line = lines[@line]
 
-        unless line.nil?
+        unless line.nil? || line[@column].nil?
           lines[@line] = transform_line!(line, @column, &@colorize)
         end
 
@@ -55,11 +55,6 @@ module Eskimo
         line << "\n" unless line.end_with?("\n")
         line << create_markers
         line
-      end
-
-      def transform_char!(string, index, &fn)
-        string[index] = fn[string[index]]
-        string
       end
     end
   end

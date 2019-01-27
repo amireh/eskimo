@@ -23,6 +23,30 @@ RSpec.describe Eskimo::Components::HighlightColumn do
     ).to include("#{pastel.decorate('f', *style)}our")
   end
 
+  it 'highlights the last character' do
+    style = [ :bold, :red ]
+
+    expect(
+      renderer.apply {
+        described_class.new(column: 3, line: 0, style: style) { "four" }
+      }
+    ).to include("fou#{pastel.decorate('r', *style)}")
+  end
+
+  it 'highlights nothing' do
+    expect(
+      renderer.apply {
+        described_class.new(column: 1234, line: 0) { "four" }
+      }
+    ).to eq("four")
+
+    expect(
+      renderer.apply {
+        described_class.new(column: 0, line: 1234) { "four" }
+      }
+    ).to eq("four")
+  end
+
   it 'inserts the arrow' do
     expect(
       strip_styles(
