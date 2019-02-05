@@ -1,3 +1,8 @@
+## 2.1.0
+
+- Added a Gutter component
+- Added a Spacer component
+
 ## 2.0.0
 
 - **BREAKING** Indent no longer performs an `rstrip` on its contents.
