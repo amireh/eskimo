@@ -12,4 +12,14 @@ RSpec.describe Eskimo::Components::Gutter do
       end
     ).to eq("| hello\n| world")
   end
+
+  it 'inserts surrounding whitespace' do
+    expect(
+      renderer.apply do
+        ESK::Gutter.new(char: '| ', spacing: 2) do
+          "hello\nworld"
+        end
+      end
+    ).to eq("| \n| \n| hello\n| world\n| \n| ")
+  end
 end

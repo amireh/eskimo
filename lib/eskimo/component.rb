@@ -27,5 +27,11 @@ module Eskimo
     def render(render:, **)
       render[@children]
     end
+
+    protected
+
+    def pastel
+      @pastel ||= Pastel.new
+    end
   end
 end
