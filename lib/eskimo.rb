@@ -1,3 +1,5 @@
+require 'did_you_mean'
+require 'did_you_mean/spell_checker'
 require 'pastel'
 require 'strings'
 require 'tty-screen'

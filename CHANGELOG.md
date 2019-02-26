@@ -1,3 +1,8 @@
+## 2.1.1
+
+Added an explicit `require` statement for DidYouMean since on some environments
+it was raising an uninitialized constant error.
+
 ## 2.1.0
 
 - Added a Gutter component
