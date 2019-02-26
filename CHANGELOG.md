@@ -1,3 +1,8 @@
+## 2.1.2
+
+Added an explicit dependency on the `did_you_mean` gem for Ruby installations
+that do not have it.
+
 ## 2.1.1
 
 Added an explicit `require` statement for DidYouMean since on some environments
