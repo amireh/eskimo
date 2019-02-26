@@ -1,3 +1,8 @@
+## 2.2.0
+
+Same contents as 2.1.2 but version was bumped for semver since a new dependency
+was introduced.
+
 ## 2.1.2
 
 Added an explicit dependency on the `did_you_mean` gem for Ruby installations
