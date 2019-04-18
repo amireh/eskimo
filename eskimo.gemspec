@@ -14,9 +14,8 @@ Gem::Specification.new do |s|
   s.test_files  = Dir.glob("spec/**/*")
   s.license     = 'MIT'
 
-  s.required_ruby_version = '>= 2.5.1'
+  s.required_ruby_version = '>= 2.4'
 
-  s.add_dependency 'did_you_mean', '~> 1.3'
   s.add_dependency 'pastel', '~> 0.7'
   s.add_dependency 'strings', '~> 0.1'
   s.add_dependency 'tty-screen', '~> 0.6'
