@@ -4,4 +4,7 @@ os:
 
 language: ruby
 install: bundle install
-script: bundle exec rspec
+script:
+  - bin/bundle
+  - bin/rspec
+  - bin/yard

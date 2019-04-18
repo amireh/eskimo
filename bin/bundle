@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+bundle install || exit $?
+
+for gem in gems/*; do
+  (cd "$gem" && bundle install) || exit $?
+done

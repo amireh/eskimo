@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+export COVERAGE_DIR="$PWD/coverage"
+
+for gem in gems/*; do
+  (cd "$gem" && bundle exec rspec "$@") || exit $?
+done
+
+bundle exec ruby -rsimplecov <<-RUBY
+  SimpleCov::Formatter::HTMLFormatter.new.format(
+    SimpleCov::ResultMerger.merged_result
+  )
+RUBY

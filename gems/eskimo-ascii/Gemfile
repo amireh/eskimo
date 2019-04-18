@@ -2,6 +2,6 @@
 
 source 'https://rubygems.org'
 
-group :development do
-  gem 'yard', '~> 0.9'
-end
+gemspec
+
+gem 'eskimo-core', path: '../eskimo-core'

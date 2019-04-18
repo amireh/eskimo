@@ -1,4 +1,4 @@
 /.yardoc
 /coverage
 /docs
-/*.gem
+/gems/*.gem

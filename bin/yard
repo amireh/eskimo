@@ -1,0 +1,18 @@
+#!/bin/sh
+
+mkdir -p docs
+
+# document the generated classes from Eskimo::HTML::AUTOGEN_TAGS
+ruby 1>docs/html_autogen.rb -r './gems/eskimo-html/lib/eskimo/html/autogen_tags.rb' <<-RUBY
+  Eskimo::HTML::AUTOGEN_TAGS.sort.each do |tag|
+    puts "# (Auto-generated) Render an HTML \`<#{tag} />\` tag"
+    puts "class Eskimo::HTML::#{tag.capitalize} < Eskimo::HTML::Component"
+    puts "end"
+  end
+RUBY
+
+bundle exec yard doc \
+  -r README.md -m markdown -o docs --title 'Eskimo' \
+  lib/ \
+  gems/*/lib \
+  docs/html_autogen.rb
