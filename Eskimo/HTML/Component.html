@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Eskimo::HTML::Component
+  
+    &mdash; Eskimo
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Eskimo::HTML::Component";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Eskimo.html" title="Eskimo (module)">Eskimo</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../HTML.html" title="Eskimo::HTML (module)">HTML</a></span></span>
+     &raquo; 
+    <span class="title">Component</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Eskimo::HTML::Component
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Eskimo::HTML::Component</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>gems/eskimo-html/lib/eskimo/html/component.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Base HTMLElement component which takes a <span class='object_link'><a href="#tag_name-instance_method" title="Eskimo::HTML::Component#tag_name (method)">#tag_name</a></span>, a set of <span class='object_link'><a href="#attributes-instance_method" title="Eskimo::HTML::Component#attributes (method)">#attributes</a></span>,
+and optionally a set of <span class='object_link'><a href="#children-instance_method" title="Eskimo::HTML::Component#children (method)">#children</a></span> and turns them into a beautiful –
+believe it or not – HTML tag:</p>
+
+<pre class="code ruby"><code class="ruby">&lt;x-foo &lt;!-- attributes --&gt;&gt;
+  &lt;!-- children --&gt;
+&lt;/x-foo&gt;
+</code></pre>
+
+<p>See <span class='object_link'><a href="../ASCII/Component.html" title="Eskimo::ASCII::Component (class)">ASCII::Component</a></span> for how this works under the hood since it&#39;s
+similar.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="A.html" title="Eskimo::HTML::A (class)">A</a></span>, <span class='object_link'><a href="Abbr.html" title="Eskimo::HTML::Abbr (class)">Abbr</a></span>, <span class='object_link'><a href="Address.html" title="Eskimo::HTML::Address (class)">Address</a></span>, <span class='object_link'><a href="Area.html" title="Eskimo::HTML::Area (class)">Area</a></span>, <span class='object_link'><a href="Article.html" title="Eskimo::HTML::Article (class)">Article</a></span>, <span class='object_link'><a href="Aside.html" title="Eskimo::HTML::Aside (class)">Aside</a></span>, <span class='object_link'><a href="Audio.html" title="Eskimo::HTML::Audio (class)">Audio</a></span>, <span class='object_link'><a href="B.html" title="Eskimo::HTML::B (class)">B</a></span>, <span class='object_link'><a href="Base.html" title="Eskimo::HTML::Base (class)">Base</a></span>, <span class='object_link'><a href="Bdi.html" title="Eskimo::HTML::Bdi (class)">Bdi</a></span>, <span class='object_link'><a href="Bdo.html" title="Eskimo::HTML::Bdo (class)">Bdo</a></span>, <span class='object_link'><a href="Blockquote.html" title="Eskimo::HTML::Blockquote (class)">Blockquote</a></span>, <span class='object_link'><a href="Body.html" title="Eskimo::HTML::Body (class)">Body</a></span>, <span class='object_link'><a href="Br.html" title="Eskimo::HTML::Br (class)">Br</a></span>, <span class='object_link'><a href="Button.html" title="Eskimo::HTML::Button (class)">Button</a></span>, <span class='object_link'><a href="Canvas.html" title="Eskimo::HTML::Canvas (class)">Canvas</a></span>, <span class='object_link'><a href="Caption.html" title="Eskimo::HTML::Caption (class)">Caption</a></span>, <span class='object_link'><a href="Cite.html" title="Eskimo::HTML::Cite (class)">Cite</a></span>, <span class='object_link'><a href="Code.html" title="Eskimo::HTML::Code (class)">Code</a></span>, <span class='object_link'><a href="Col.html" title="Eskimo::HTML::Col (class)">Col</a></span>, <span class='object_link'><a href="Colgroup.html" title="Eskimo::HTML::Colgroup (class)">Colgroup</a></span>, <span class='object_link'><a href="Data.html" title="Eskimo::HTML::Data (class)">Data</a></span>, <span class='object_link'><a href="Datalist.html" title="Eskimo::HTML::Datalist (class)">Datalist</a></span>, <span class='object_link'><a href="Dd.html" title="Eskimo::HTML::Dd (class)">Dd</a></span>, <span class='object_link'><a href="Del.html" title="Eskimo::HTML::Del (class)">Del</a></span>, <span class='object_link'><a href="Details.html" title="Eskimo::HTML::Details (class)">Details</a></span>, <span class='object_link'><a href="Dfn.html" title="Eskimo::HTML::Dfn (class)">Dfn</a></span>, <span class='object_link'><a href="Dialog.html" title="Eskimo::HTML::Dialog (class)">Dialog</a></span>, <span class='object_link'><a href="Div.html" title="Eskimo::HTML::Div (class)">Div</a></span>, <span class='object_link'><a href="Dl.html" title="Eskimo::HTML::Dl (class)">Dl</a></span>, <span class='object_link'><a href="Dt.html" title="Eskimo::HTML::Dt (class)">Dt</a></span>, <span class='object_link'><a href="Em.html" title="Eskimo::HTML::Em (class)">Em</a></span>, <span class='object_link'><a href="Embed.html" title="Eskimo::HTML::Embed (class)">Embed</a></span>, <span class='object_link'><a href="Fieldset.html" title="Eskimo::HTML::Fieldset (class)">Fieldset</a></span>, <span class='object_link'><a href="Figcaption.html" title="Eskimo::HTML::Figcaption (class)">Figcaption</a></span>, <span class='object_link'><a href="Figure.html" title="Eskimo::HTML::Figure (class)">Figure</a></span>, <span class='object_link'><a href="Footer.html" title="Eskimo::HTML::Footer (class)">Footer</a></span>, <span class='object_link'><a href="Form.html" title="Eskimo::HTML::Form (class)">Form</a></span>, <span class='object_link'><a href="H1.html" title="Eskimo::HTML::H1 (class)">H1</a></span>, <span class='object_link'><a href="H2.html" title="Eskimo::HTML::H2 (class)">H2</a></span>, <span class='object_link'><a href="H3.html" title="Eskimo::HTML::H3 (class)">H3</a></span>, <span class='object_link'><a href="H4.html" title="Eskimo::HTML::H4 (class)">H4</a></span>, <span class='object_link'><a href="H5.html" title="Eskimo::HTML::H5 (class)">H5</a></span>, <span class='object_link'><a href="H6.html" title="Eskimo::HTML::H6 (class)">H6</a></span>, <span class='object_link'><a href="Head.html" title="Eskimo::HTML::Head (class)">Head</a></span>, <span class='object_link'><a href="Header.html" title="Eskimo::HTML::Header (class)">Header</a></span>, <span class='object_link'><a href="Hgroup.html" title="Eskimo::HTML::Hgroup (class)">Hgroup</a></span>, <span class='object_link'><a href="Hr.html" title="Eskimo::HTML::Hr (class)">Hr</a></span>, <span class='object_link'><a href="Html.html" title="Eskimo::HTML::Html (class)">Html</a></span>, <span class='object_link'><a href="I.html" title="Eskimo::HTML::I (class)">I</a></span>, <span class='object_link'><a href="Iframe.html" title="Eskimo::HTML::Iframe (class)">Iframe</a></span>, <span class='object_link'><a href="Img.html" title="Eskimo::HTML::Img (class)">Img</a></span>, <span class='object_link'><a href="Input.html" title="Eskimo::HTML::Input (class)">Input</a></span>, <span class='object_link'><a href="Ins.html" title="Eskimo::HTML::Ins (class)">Ins</a></span>, <span class='object_link'><a href="Kbd.html" title="Eskimo::HTML::Kbd (class)">Kbd</a></span>, <span class='object_link'><a href="Keygen.html" title="Eskimo::HTML::Keygen (class)">Keygen</a></span>, <span class='object_link'><a href="Label.html" title="Eskimo::HTML::Label (class)">Label</a></span>, <span class='object_link'><a href="Legend.html" title="Eskimo::HTML::Legend (class)">Legend</a></span>, <span class='object_link'><a href="Li.html" title="Eskimo::HTML::Li (class)">Li</a></span>, <span class='object_link'><a href="Link.html" title="Eskimo::HTML::Link (class)">Link</a></span>, <span class='object_link'><a href="Main.html" title="Eskimo::HTML::Main (class)">Main</a></span>, <span class='object_link'><a href="Map.html" title="Eskimo::HTML::Map (class)">Map</a></span>, <span class='object_link'><a href="Mark.html" title="Eskimo::HTML::Mark (class)">Mark</a></span>, <span class='object_link'><a href="Math.html" title="Eskimo::HTML::Math (class)">Math</a></span>, <span class='object_link'><a href="Menu.html" title="Eskimo::HTML::Menu (class)">Menu</a></span>, <span class='object_link'><a href="Menuitem.html" title="Eskimo::HTML::Menuitem (class)">Menuitem</a></span>, <span class='object_link'><a href="Meta.html" title="Eskimo::HTML::Meta (class)">Meta</a></span>, <span class='object_link'><a href="Meter.html" title="Eskimo::HTML::Meter (class)">Meter</a></span>, <span class='object_link'><a href="Nav.html" title="Eskimo::HTML::Nav (class)">Nav</a></span>, <span class='object_link'><a href="Noscript.html" title="Eskimo::HTML::Noscript (class)">Noscript</a></span>, <span class='object_link'><a href="Object.html" title="Eskimo::HTML::Object (class)">Object</a></span>, <span class='object_link'><a href="Ol.html" title="Eskimo::HTML::Ol (class)">Ol</a></span>, <span class='object_link'><a href="Optgroup.html" title="Eskimo::HTML::Optgroup (class)">Optgroup</a></span>, <span class='object_link'><a href="Option.html" title="Eskimo::HTML::Option (class)">Option</a></span>, <span class='object_link'><a href="Output.html" title="Eskimo::HTML::Output (class)">Output</a></span>, <span class='object_link'><a href="P.html" title="Eskimo::HTML::P (class)">P</a></span>, <span class='object_link'><a href="Param.html" title="Eskimo::HTML::Param (class)">Param</a></span>, <span class='object_link'><a href="Picture.html" title="Eskimo::HTML::Picture (class)">Picture</a></span>, <span class='object_link'><a href="Pre.html" title="Eskimo::HTML::Pre (class)">Pre</a></span>, <span class='object_link'><a href="Progress.html" title="Eskimo::HTML::Progress (class)">Progress</a></span>, <span class='object_link'><a href="Q.html" title="Eskimo::HTML::Q (class)">Q</a></span>, <span class='object_link'><a href="Rb.html" title="Eskimo::HTML::Rb (class)">Rb</a></span>, <span class='object_link'><a href="Rp.html" title="Eskimo::HTML::Rp (class)">Rp</a></span>, <span class='object_link'><a href="Rt.html" title="Eskimo::HTML::Rt (class)">Rt</a></span>, <span class='object_link'><a href="Rtc.html" title="Eskimo::HTML::Rtc (class)">Rtc</a></span>, <span class='object_link'><a href="Ruby.html" title="Eskimo::HTML::Ruby (class)">Ruby</a></span>, <span class='object_link'><a href="S.html" title="Eskimo::HTML::S (class)">S</a></span>, <span class='object_link'><a href="Samp.html" title="Eskimo::HTML::Samp (class)">Samp</a></span>, <span class='object_link'><a href="Script.html" title="Eskimo::HTML::Script (class)">Script</a></span>, <span class='object_link'><a href="Section.html" title="Eskimo::HTML::Section (class)">Section</a></span>, <span class='object_link'><a href="Select.html" title="Eskimo::HTML::Select (class)">Select</a></span>, <span class='object_link'><a href="Slot.html" title="Eskimo::HTML::Slot (class)">Slot</a></span>, <span class='object_link'><a href="Small.html" title="Eskimo::HTML::Small (class)">Small</a></span>, <span class='object_link'><a href="Source.html" title="Eskimo::HTML::Source (class)">Source</a></span>, <span class='object_link'><a href="Span.html" title="Eskimo::HTML::Span (class)">Span</a></span>, <span class='object_link'><a href="Strong.html" title="Eskimo::HTML::Strong (class)">Strong</a></span>, <span class='object_link'><a href="Style.html" title="Eskimo::HTML::Style (class)">Style</a></span>, <span class='object_link'><a href="Sub.html" title="Eskimo::HTML::Sub (class)">Sub</a></span>, <span class='object_link'><a href="Summary.html" title="Eskimo::HTML::Summary (class)">Summary</a></span>, <span class='object_link'><a href="Sup.html" title="Eskimo::HTML::Sup (class)">Sup</a></span>, <span class='object_link'><a href="Svg.html" title="Eskimo::HTML::Svg (class)">Svg</a></span>, <span class='object_link'><a href="Table.html" title="Eskimo::HTML::Table (class)">Table</a></span>, <span class='object_link'><a href="Tbody.html" title="Eskimo::HTML::Tbody (class)">Tbody</a></span>, <span class='object_link'><a href="Td.html" title="Eskimo::HTML::Td (class)">Td</a></span>, <span class='object_link'><a href="Template.html" title="Eskimo::HTML::Template (class)">Template</a></span>, <span class='object_link'><a href="Textarea.html" title="Eskimo::HTML::Textarea (class)">Textarea</a></span>, <span class='object_link'><a href="Tfoot.html" title="Eskimo::HTML::Tfoot (class)">Tfoot</a></span>, <span class='object_link'><a href="Th.html" title="Eskimo::HTML::Th (class)">Th</a></span>, <span class='object_link'><a href="Thead.html" title="Eskimo::HTML::Thead (class)">Thead</a></span>, <span class='object_link'><a href="Time.html" title="Eskimo::HTML::Time (class)">Time</a></span>, <span class='object_link'><a href="Title.html" title="Eskimo::HTML::Title (class)">Title</a></span>, <span class='object_link'><a href="Tr.html" title="Eskimo::HTML::Tr (class)">Tr</a></span>, <span class='object_link'><a href="Track.html" title="Eskimo::HTML::Track (class)">Track</a></span>, <span class='object_link'><a href="U.html" title="Eskimo::HTML::U (class)">U</a></span>, <span class='object_link'><a href="Ul.html" title="Eskimo::HTML::Ul (class)">Ul</a></span>, <span class='object_link'><a href="Var.html" title="Eskimo::HTML::Var (class)">Var</a></span>, <span class='object_link'><a href="Video.html" title="Eskimo::HTML::Video (class)">Video</a></span>, <span class='object_link'><a href="Wbr.html" title="Eskimo::HTML::Wbr (class)">Wbr</a></span></p>
+</div>
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="ATTRIBUTE_REWRITES-constant" class="">ATTRIBUTE_REWRITES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Mapping of Ruby attribute name to HTML attribute name; some words like
+“class” are reserved and are problematic when passed as attributes so this
+hash supports a method to rewrite those.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>className</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>class</span><span class='tstring_end'>&#39;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attributes-instance_method" title="#attributes (instance method)">#<strong>attributes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute attributes.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#children-instance_method" title="#children (instance method)">#<strong>children</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute children.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tag_name-instance_method" title="#tag_name (instance method)">#<strong>tag_name</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute tag_name.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(attributes = {}, &amp;children)  &#x21d2; Component </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Component.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#render-instance_method" title="#render (instance method)">#<strong>render</strong>(render:)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(attributes = {}, &amp;children)  &#x21d2; <tt><span class='object_link'><a href="" title="Eskimo::HTML::Component (class)">Component</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Component</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gems/eskimo-html/lib/eskimo/html/component.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_children'>children</span><span class='rparen'>)</span>
+  <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='ivar'>@children</span> <span class='op'>=</span> <span class='id identifier rubyid_children'>children</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="attributes-instance_method">
+  
+    #<strong>attributes</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Eskimo::HTML::Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute attributes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gems/eskimo-html/lib/eskimo/html/component.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
+  <span class='ivar'>@attributes</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="children-instance_method">
+  
+    #<strong>children</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Eskimo::HTML::Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute children</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gems/eskimo-html/lib/eskimo/html/component.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_children'>children</span>
+  <span class='ivar'>@children</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tag_name-instance_method">
+  
+    #<strong>tag_name</strong>  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Eskimo::HTML::Object (class)">Object</a></span></tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute tag_name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gems/eskimo-html/lib/eskimo/html/component.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tag_name'>tag_name</span>
+  <span class='ivar'>@tag_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="render-instance_method">
+  
+    #<strong>render</strong>(render:)  &#x21d2; <tt><span class='object_link'><a href="Object.html" title="Eskimo::HTML::Object (class)">Object</a></span></tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'gems/eskimo-html/lib/eskimo/html/component.rb', line 30</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span><span class='lparen'>(</span><span class='label'>render:</span><span class='comma'>,</span> <span class='op'>**</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tag_with_attributes'>tag_with_attributes</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_serialize_attributes'>serialize_attributes</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tag_with_attributes'>tag_with_attributes</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_render'>render</span><span class='lbracket'>[</span><span class='ivar'>@children</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Thu Apr 18 12:55:23 2019 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.15 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
