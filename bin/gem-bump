@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+version = ENV.fetch('VERSION', ARGV[0])
+
+fail "$0: VERSION must be set" if version.empty?
+
+Dir["gems/*/lib/**/version.rb"].each do |version_file|
+  File.write(version_file, File.read(version_file).sub(
+    %r{VERSION(\s+)=(\s+)(['"])[^'"]+(['"])},
+    "VERSION\\1=\\2\\3#{version}\\4"
+  ))
+end

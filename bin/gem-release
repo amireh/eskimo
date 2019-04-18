@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+for gem in gems/*; do
+  (
+    cd "$gem" &&
+    rm *.gem &&
+    gem build *.gemspec &&
+    echo "$0: publishing $gem" 1>&2 &&
+    gem push *.gem
+  )
+done
