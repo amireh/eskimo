@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.test_files  = Dir.glob("spec/**/*")
   s.license     = 'MIT'
 
-  s.add_dependency 'eskimo-core', '~> 3.0.0.pre.2'
+  s.add_dependency 'eskimo-core', Eskimo::ASCII::VERSION
   s.add_dependency 'pastel', '~> 0.7'
   s.add_dependency 'strings', '~> 0.1'
   s.add_dependency 'tty-screen', '~> 0.6'

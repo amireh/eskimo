@@ -26,11 +26,10 @@ To bump the version
 
     bin/gem-bump x.y.z
 
-Verify changes in git, if they look good, then go to each `gems/*/*.gemspec`
-and manually edit the runtime dependencies to point to the __exact__ version
-you've bumped to.
+All gems have the same version and have an exact (`=`) dependency on other
+`eskimo-` gems.
 
-To release:
+Verify changes in git, if they look good, then release:
 
     bin/gem-release
 

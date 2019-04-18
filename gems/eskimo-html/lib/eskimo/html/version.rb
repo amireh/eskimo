@@ -2,6 +2,6 @@
 
 module Eskimo
   module HTML
-    VERSION = '3.0.0.pre.2'
+    VERSION = '3.0.0'
   end
 end
