@@ -196,20 +196,6 @@ Refer to the implementation of the existing Eskimo components for guidance.
 
 See the accompanying [API documentation][component-reference].
 
-## Hacking
-
-Use `bin/bundle` to install the dependencies of each gem.
-
-Use `bin/rspec` to run RSpec against all the gems. Coverage is aggregated in
-`./coverage`.
-
-Use `bin/yard` to generate the documentation. View at `./docs/index.html`.
-
-To bump the version, make sure you edit the `version.rb` files for all the
-gems:
-
-- `gems/*/lib/eskimo/**/version.rb`
-
 ## License
 
 MIT

@@ -1,8 +1,8 @@
 PATH
   remote: ../eskimo-ascii
   specs:
-    eskimo-ascii (3.0.0)
-      eskimo-core (~> 3)
+    eskimo-ascii (3.0.0.pre.2)
+      eskimo-core (~> 3.0.0.pre.2)
       pastel (~> 0.7)
       strings (~> 0.1)
       tty-screen (~> 0.6)
@@ -10,14 +10,14 @@ PATH
 PATH
   remote: ../eskimo-core
   specs:
-    eskimo-core (3.0.0)
+    eskimo-core (3.0.0.pre.2)
 
 PATH
   remote: .
   specs:
-    eskimo (3.0.0)
-      eskimo-ascii (= 3.0.0)
-      eskimo-core (= 3.0.0)
+    eskimo (3.0.0.pre.2)
+      eskimo-ascii (~> 3.0.0.pre.2)
+      eskimo-core (~> 3.0.0.pre.2)
 
 GEM
   remote: https://rubygems.org/

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 mkdir -p docs
 
@@ -10,6 +10,10 @@ ruby 1>docs/html_autogen.rb -r './gems/eskimo-html/lib/eskimo/html/autogen_tags.
     puts "end"
   end
 RUBY
+
+if [[ "$?" -ne 0 ]]; then
+  exit 1
+fi
 
 bundle exec yard doc \
   -r README.md -m markdown -o docs --title 'Eskimo' \

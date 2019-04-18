@@ -2,6 +2,6 @@
 
 module Eskimo
   module Core
-    VERSION = '3.0.0'
+    VERSION = '3.0.0.pre.2'
   end
 end

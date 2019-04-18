@@ -10,4 +10,10 @@ RSpec.describe Eskimo::ASCII::Component do
       }
     ).to eq("hello\nworld!")
   end
+
+  it 'provides a pastel for giggles' do
+    expect(
+      Eskimo::ASCII::Component.new.send(:pastel)
+    ).to be_a(Pastel::Delegator)
+  end
 end

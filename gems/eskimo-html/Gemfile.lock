@@ -1,13 +1,13 @@
 PATH
   remote: ../eskimo-core
   specs:
-    eskimo-core (3.0.0)
+    eskimo-core (3.0.0.pre.2)
 
 PATH
   remote: .
   specs:
-    eskimo-html (3.0.0)
-      eskimo-core (~> 3)
+    eskimo-html (3.0.0.pre.2)
+      eskimo-core (= 3.0.0.pre.2)
 
 GEM
   remote: https://rubygems.org/

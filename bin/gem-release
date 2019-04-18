@@ -3,9 +3,9 @@
 for gem in gems/*; do
   (
     cd "$gem" &&
-    rm *.gem &&
+    rm -f *.gem &&
     gem build *.gemspec &&
-    echo "$0: publishing $gem" 1>&2 &&
-    gem push *.gem
-  )
+    gem push *.gem &&
+    rm -f *.gem
+  ) || exit $?
 done

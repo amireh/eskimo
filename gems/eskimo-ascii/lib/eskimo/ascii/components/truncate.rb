@@ -1,27 +1,29 @@
 # frozen_string_literal: true
 
-# Truncate text from the beginning if it exceeds a certain width.
-#
-#     Truncate.new(width: 3) do
-#       "foo bar"
-#     end
-#     # => "... bar"
-class Eskimo::ASCII::Truncate < Eskimo::ASCII::Component
-  attr_reader :maxlen
+module Eskimo::ASCII
+  # Truncate text from the beginning if it exceeds a certain width.
+  #
+  #     Truncate.new(width: 3) do
+  #       "foo bar"
+  #     end
+  #     # => "... bar"
+  class Truncate < Component
+    attr_reader :maxlen
 
-  def initialize(reserve: 0, width: Constants::SCREEN_COLUMNS, &children)
-    @maxlen = [0, width - reserve].max
+    def initialize(reserve: 0, width: Constants::SCREEN_COLUMNS, &children)
+      @maxlen = [0, width - reserve].max
 
-    super
-  end
+      super
+    end
 
-  def render(**)
-    text = super
+    def render(**)
+      text = super
 
-    if text.length >= maxlen
-      '...' + text[text.length - maxlen - 1 .. -1]
-    else
-      text
+      if text.length >= maxlen
+        '...' + text[text.length - maxlen - 1 .. -1]
+      else
+        text
+      end
     end
   end
 end

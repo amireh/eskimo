@@ -1,8 +1,3 @@
-module Eskimo
-  module ASCII
-  end
-end
-
 begin
   require 'did_you_mean'
 rescue LoadError
@@ -11,6 +6,11 @@ end
 require 'pastel'
 require 'strings'
 require 'tty-screen'
+
+module Eskimo
+  module ASCII
+  end
+end
 
 require 'eskimo/ascii/version'
 require 'eskimo/ascii/constants'

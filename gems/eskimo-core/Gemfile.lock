@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    eskimo-core (3.0.0)
+    eskimo-core (3.0.0.pre.2)
 
 GEM
   remote: https://rubygems.org/
