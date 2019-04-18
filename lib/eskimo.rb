@@ -1,4 +1,8 @@
-require 'did_you_mean'
+begin
+  require 'did_you_mean'
+rescue LoadError
+end
+
 require 'pastel'
 require 'strings'
 require 'tty-screen'

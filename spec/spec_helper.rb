@@ -8,6 +8,7 @@ SimpleCov.start do
 end
 
 require 'eskimo'
+require 'eskimo/components/html'
 require_relative './support/component_suite'
 
 ESK = Eskimo::Components
