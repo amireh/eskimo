@@ -1,3 +1,26 @@
+## 4.0.0
+
+BREAKING
+
+`eskimo` "convenience" gem is no longer maintained; pull in `eskimo-core`
+manually if you aren't, and `eskimo-ascii` if you need it. I'm not sure what I
+was thinking.
+
+CHANGES
+
+Added official support for Slots, and otherwise some convenience and QOL
+changes.
+
+- Components can now conveniently receive props and children, similar in principle to how React components work, by prepending the helper module Eskimo::Core::Props. Functionally, this is not new, but it reduces boilerplate and frees you from writing your own helper.
+- Components may now render specific children into *slots* via the Eskimo::Core::Slots utility module.
+- HTML renderer now correctly encodes and escapes attribute names and values
+- HTML renderer now recognizes void elements, like `<br>`
+- Added a utility module Eskimo::HTML::Builder for "composing" tags in a natural way, similar to preact's `h` helper
+
+Mixing `Props` and `Slots` modules is a little finnicky because of an
+implementation detail, but the modules will fail early and loud in case they're
+prepended in an incorrect fashion.
+
 ## 3.0.0
 
 This release introduces a new set of components for HTML rendering allowing for

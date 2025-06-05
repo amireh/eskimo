@@ -2,3 +2,4 @@
 /coverage
 /docs
 /gems/*.gem
+gems/*/coverage
