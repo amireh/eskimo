@@ -3,3 +3,4 @@
 /docs
 /gems/*.gem
 gems/*/coverage
+gems/*/*.gem

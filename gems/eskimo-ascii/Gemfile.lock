@@ -6,7 +6,7 @@ PATH
 PATH
   remote: .
   specs:
-    eskimo-ascii (3.0.0)
+    eskimo-ascii (4.0.0)
       eskimo-core (~> 4.0)
       pastel (~> 0.7)
       strings (~> 0.1)
